@@ -93,7 +93,6 @@ const Integration = () => {
                             </div>
                         </div>
                     </div>
-                </h2>
             </Container>
         </div>
     )
