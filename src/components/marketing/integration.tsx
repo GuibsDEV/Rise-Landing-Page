@@ -95,9 +95,7 @@ const Integration = () => {
                     </div>
             </Container>
         </div>
-    )
+    );
 };
 
 export default Integration;
-    )
-}
