@@ -30,8 +30,8 @@ const MobileMenu = () => {
                     ))}
                     <div className="pt-4 mt-4 border-t border-border">
                         <Link href="#" className="w-full">
-                            <Button className="w-full" variant="blue">
-                                Get Started
+                            <Button className="w-full bg-red-600 hover:bg-red-700">
+                                Baixar Agora
                             </Button>
                         </Link>
                     </div>

@@ -1,40 +1,40 @@
 import {
-    ChartColumnBigIcon,
-    DatabaseIcon,
-    TrendingUpIcon,
-    WandSparklesIcon,
-    ZapIcon
+    GaugeIcon,
+    WifiIcon,
+    MousePointerIcon,
+    SettingsIcon,
+    UsersIcon
 } from "lucide-react";
 
 export const FEATURES = [
     {
-        title: "Enhance User Experience",
-        description: "Efficiently manage user data and interactions with advanced AI tools",
-        icon: WandSparklesIcon,
-        image: "/images/feature-two.svg",
-    },
-    {
-        title: "Comprehensive Insights",
-        description: "Gain deep insights into your audience and campaign performance",
-        icon: ChartColumnBigIcon,
+        title: "Mais FPS Estável",
+        description: "Otimizações avançadas no sistema para garantir FPS consistente e sem quedas durante o jogo",
+        icon: GaugeIcon,
         image: "/images/feature-one.svg",
     },
     {
-        title: "Data Management",
-        description: "Manage your data with ease and efficiency",
-        icon: DatabaseIcon,
+        title: "Ping Otimizado",
+        description: "Configurações de rede avançadas para reduzir latência e melhorar conexão com servidores",
+        icon: WifiIcon,
+        image: "/images/feature-two.svg",
+    },
+    {
+        title: "Zero Input Lag",
+        description: "Rise Input integrado reduz drasticamente o delay entre seus comandos e a resposta no jogo",
+        icon: MousePointerIcon,
         image: "/images/feature-three.svg",
     },
     {
-        title: "Real-Time Analytics",
-        description: "Track and analyze your marketing performance in real-time",
-        icon: TrendingUpIcon,
+        title: "Configs Pro Players",
+        description: "Aplique configurações usadas por jogadores profissionais com apenas um clique",
+        icon: SettingsIcon,
         image: "/images/feature-four.svg",
     },
     {
-        title: "Dynamic Optimization",
-        description: "AI-powered optimization for smarter marketing",
-        icon: ZapIcon,
+        title: "Comunidade Exclusiva",
+        description: "Acesso ao Discord com +5.600 gamers, eventos, sorteios e suporte da comunidade",
+        icon: UsersIcon,
         image: "/images/feature-five.svg",
     }
 ]

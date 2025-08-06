@@ -16,8 +16,8 @@ interface MetadataProps {
 }
 
 export const generateMetadata = ({
-    title = `Vetra - AI-Powered Project Management & Team Collaboration`,
-    description = `Vetra is an intelligent project management platform that transforms how teams work together. Leverage AI to automate workflows, enhance collaboration, and boost productivity. Experience smarter project management today.`,
+    title = `RiseFPS - Desbloqueie seu potencial gamer`,
+    description = `RiseFPS é o aplicativo desktop que otimiza seu PC Windows para máxima performance em jogos. Mais FPS, menos delay, ping otimizado. Maximize a performance do seu PC e deixe sua habilidade ser o único limite.`,
     icons = [
         {
             rel: "icon",
@@ -32,16 +32,16 @@ export const generateMetadata = ({
     ],
     noIndex = false,
     keywords = [
-        "AI marketing automation",
-        "social media marketing",
-        "content generation",
-        "marketing analytics",
-        "campaign management",
-        "multilingual marketing",
-        "AI copywriting",
-        "marketing workflow",
-        "performance tracking",
-        "digital marketing tools"
+        "otimização PC jogos",
+        "aumentar FPS",
+        "reduzir ping",
+        "input lag",
+        "performance gaming",
+        "otimizador Windows",
+        "configs pro players",
+        "gaming performance",
+        "FPS booster",
+        "PC optimization"
     ],
     author = process.env.NEXT_PUBLIC_AUTHOR_NAME,
     type = "website",
@@ -58,7 +58,7 @@ export const generateMetadata = ({
         keywords,
         authors: [{ name: author }],
         creator: author,
-        publisher: process.env.NEXT_PUBLIC_APP_NAME,
+        publisher: "RiseFPS",
         formatDetection: {
             email: false,
             address: false,

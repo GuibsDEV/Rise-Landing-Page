@@ -27,19 +27,19 @@ const Pricing = () => {
                 <Container>
                     <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
                         <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
-                            Find the right plan that suits <br className="hidden lg:block" /> <span className="font-subheading italic">your needs</span>
+                            Escolha o plano ideal <br className="hidden lg:block" /> <span className="font-subheading italic text-red-500">para você</span>
                         </h2>
                         <p className="text-base md:text-lg text-center text-accent-foreground/80 mt-6">
-                            Transform your marketing with AI-powered automation. Create campaigns faster, generate better content, and make smarter decisions in minutes.
+                            Todos os planos incluem atualizações constantes, acesso à comunidade Discord e suporte técnico.
                         </p>
                     </div>
                 </Container>
 
                 <Container delay={0.2}>
                     <div className="flex items-center justify-center space-x-4 mt-6">
-                        <span className="text-base font-medium">Monthly</span>
+                        <span className="text-base font-medium">Mensal</span>
                         <button onClick={handleSwitch} className="relative rounded-full focus:outline-none">
-                            <div className="w-12 h-6 transition rounded-full shadow-md outline-none bg-blue-500"></div>
+                            <div className="w-12 h-6 transition rounded-full shadow-md outline-none bg-red-500"></div>
                             <div
                                 className={cn(
                                     "absolute inline-flex items-center justify-center w-4 h-4 transition-all duration-500 ease-in-out top-1 left-1 rounded-full bg-white",
@@ -47,12 +47,12 @@ const Pricing = () => {
                                 )}
                             />
                         </button>
-                        <span className="text-base font-medium">Annually</span>
+                        <span className="text-base font-medium">Anual</span>
                     </div>
                 </Container>
             </div>
 
-            <div className="grid w-full grid-cols-1 lg:grid-cols-2 pt-8 lg:pt-12 gap-4 lg:gap-6 max-w-4xl mx-auto">
+            <div className="grid w-full grid-cols-1 lg:grid-cols-3 pt-8 lg:pt-12 gap-4 lg:gap-6 max-w-6xl mx-auto">
                 {PLANS.map((plan, idx) => (
                     <Container key={idx} delay={0.1 * idx + 0.2}>
                         <Plan key={plan.id} plan={plan} billPlan={billPlan} />
@@ -67,10 +67,10 @@ const Plan = ({ plan, billPlan }: { plan: PLAN, billPlan: Plan }) => {
     return (
         <div className={cn(
             "flex flex-col relative rounded-2xl lg:rounded-3xl transition-all bg-background/ items-start w-full border border-foreground/10 overflow-hidden",
-            plan.title === "Mastermind" && "border-blue-500"
+            plan.title === "Rise Plus" && "border-red-500"
         )}>
-            {plan.title === "Mastermind" && (
-                <div className="absolute top-1/2 inset-x-0 mx-auto h-12 -rotate-45 w-full bg-blue-600 rounded-2xl lg:rounded-3xl blur-[8rem] -z-10"></div>
+            {plan.title === "Rise Plus" && (
+                <div className="absolute top-1/2 inset-x-0 mx-auto h-12 -rotate-45 w-full bg-red-600 rounded-2xl lg:rounded-3xl blur-[8rem] -z-10"></div>
             )}
 
             <div className="p-4 md:p-8 flex rounded-t-2xl lg:rounded-t-3xl flex-col items-start w-full relative">
@@ -80,7 +80,7 @@ const Plan = ({ plan, billPlan }: { plan: PLAN, billPlan: Plan }) => {
                 <h3 className="mt-3 text-3xl font-medium md:text-5xl">
                     <NumberFlow
                         value={billPlan === "monthly" ? plan.monthlyPrice : plan.annuallyPrice}
-                        suffix={billPlan === "monthly" ? "/mo" : "/yr"}
+                        suffix={billPlan === "monthly" ? "/mês" : "/ano"}
                         format={{
                             currency: "USD",
                             style: "currency",
@@ -96,7 +96,7 @@ const Plan = ({ plan, billPlan }: { plan: PLAN, billPlan: Plan }) => {
                 </p>
             </div>
             <div className="flex flex-col items-start w-full px-4 py-2 md:px-8">
-                <Button size="lg" variant={plan.title === "Mastermind" ? "blue" : "white"} className="w-full">
+                <Button size="lg" variant={plan.title === "Rise Plus" ? "default" : "white"} className={cn("w-full", plan.title === "Rise Plus" && "bg-red-600 hover:bg-red-700")}>
                     {plan.buttonText}
                 </Button>
                 <div className="h-8 overflow-hidden w-full mx-auto">
@@ -110,9 +110,9 @@ const Plan = ({ plan, billPlan }: { plan: PLAN, billPlan: Plan }) => {
                             className="text-sm text-center text-muted-foreground mt-3 mx-auto block"
                         >
                             {billPlan === "monthly" ? (
-                                "Billed monthly"
+                                "Cobrado mensalmente"
                             ) : (
-                                "Billed in one annual payment"
+                                "Cobrado anualmente"
                             )}
                         </motion.span>
                     </AnimatePresence>
@@ -120,12 +120,12 @@ const Plan = ({ plan, billPlan }: { plan: PLAN, billPlan: Plan }) => {
             </div>
             <div className="flex flex-col items-start w-full p-5 mb-4 ml-1 gap-y-2">
                 <span className="text-base text-left mb-2">
-                    Includes: 
+                    Inclui:
                 </span>
                 {plan.features.map((feature, index) => (
                     <div key={index} className="flex items-center justify-start gap-2">
                         <div className="flex items-center justify-center">
-                            <CheckIcon className="size-5" />
+                            <CheckIcon className="size-5 text-green-500" />
                         </div>
                         <span>{feature}</span>
                     </div>

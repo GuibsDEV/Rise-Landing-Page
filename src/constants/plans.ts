@@ -12,39 +12,58 @@ export type PLAN = {
 
 export const PLANS: PLAN[] = [
     {
-        id: "standard",
-        title: "Standard",
-        desc: "Perfect for solopreneurs and small teams looking to automate their content creation and social media with AI tools.",
-        monthlyPrice: 29,
-        annuallyPrice: 306,
-        buttonText: "Upgrade to Standard",
+        id: "essencial",
+        title: "Rise Essencial",
+        desc: "Perfeito para gamers casuais que querem melhorar a performance básica do PC e ter acesso à comunidade.",
+        monthlyPrice: 17,
+        annuallyPrice: 180,
+        buttonText: "Assinar Essencial",
         features: [
-            "AI content (1,000 words/mo)",
-            "3 social media channels",
-            "Basic post scheduling",
-            "Content calendar",
-            "Basic analytics dashboard",
-            "2 team members",
-            "Email support"
+            "Otimização básica do sistema",
+            "Scripts de limpeza automática",
+            "Configurações de rede básicas",
+            "Acesso à comunidade Discord",
+            "Suporte por ticket",
+            "Atualizações mensais",
+            "Guias de otimização"
         ],
         link: "#"
     },
     {
-        id: "mastermind",
-        title: "Mastermind",
-        desc: "Ideal for growing businesses and agencies who need advanced AI capabilities and automation to scale their marketing.",
-        monthlyPrice: 79,
-        annuallyPrice: 834,
-        badge: "Most Popular",
-        buttonText: "Upgrade to Mastermind",
+        id: "plus",
+        title: "Rise Plus",
+        desc: "Para jogadores competitivos que buscam performance avançada e configurações profissionais.",
+        monthlyPrice: 24,
+        annuallyPrice: 252,
+        badge: "Mais Popular",
+        buttonText: "Assinar Plus",
         features: [
-            "AI content (10,000 words/mo)",
-            "Advanced AI copywriting",
-            "Multi-language content generation",
-            "Custom brand voice training",
-            "Custom workflow automation",
-            "Priority 24/7 support",
-            "Up to 10 team members"
+            "Tudo do Essencial",
+            "Otimização em tempo real",
+            "Configs de Pro Players",
+            "Rise Input integrado",
+            "Monitoramento de performance",
+            "Suporte prioritário",
+            "Atualizações semanais"
+        ],
+        link: "#"
+    },
+    {
+        id: "pro",
+        title: "Rise Pro",
+        desc: "A experiência completa para streamers e gamers profissionais que exigem máxima performance.",
+        monthlyPrice: 30,
+        annuallyPrice: 315,
+        badge: "Profissional",
+        buttonText: "Assinar Pro",
+        features: [
+            "Tudo do Plus",
+            "Otimização personalizada",
+            "Profiles por jogo",
+            "Análise avançada de hardware",
+            "Suporte 24/7 via Discord",
+            "Beta access exclusivo",
+            "Consultoria 1:1 mensal"
         ],
         link: "#"
     },
